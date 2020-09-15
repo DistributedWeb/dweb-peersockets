@@ -1,7 +1,7 @@
 {
-  "name": "peersockets",
+  "name": "dweb-peersockets",
   "version": "1.0.0",
-  "description": "Directly connect to peers via hyperswarm (or an API-compatible alternative). ",
+  "description": "Directly connect to peers via dwebswarm (or an API-compatible alternative). ",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/andrewosh/peersockets.git"
   },
   "keywords": [
-    "hyperswarm",
+    "dwebswarm",
     "sockets"
   ],
   "author": "Andrew Osheroff <andrewosh@gmail.com>",
@@ -22,9 +22,9 @@
   "homepage": "https://github.com/andrewosh/peersockets#readme",
   "devDependencies": {
     "@corestore/networker": "^0.0.1",
-    "@hyperswarm/dht": "^3.5.2",
-    "corestore": "^5.1.1",
-    "hypercore-crypto": "^2.0.0",
+    "@dwebswarm/dht": "git://github.com/DistributedWeb/dht.git#aa9c40c1ae5a478e1f216d1c88377298f90d4168",
+    "dwebstore": "git://github.com/DistributedWeb/dwebstore.git#03772a70db1a813fab16825366b97530a843c4c7",
+    "ddatabase-crypto": "git://github.com/DistributedWeb/ddatabase-crypto.git#8ebb4edfcf9d422d02951360f6e66a7b07ee1cd5",
     "random-access-memory": "^3.1.1",
     "standard": "^14.3.3",
     "tape": "^4.13.2"

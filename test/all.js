@@ -1,10 +1,10 @@
 const test = require('tape')
-const dht = require('@hyperswarm/dht')
+const dht = require('@dwebswarm/dht')
 const ram = require('random-access-memory')
-const hypercoreCrypto = require('hypercore-crypto')
+const hypercoreCrypto = require('ddatabase-crypto')
 const CorestoreNetworker = require('@corestore/networker')
-const HypercoreProtocol = require('hypercore-protocol')
-const Corestore = require('corestore')
+const HypercoreProtocol = require('ddatabase-protocol')
+const DWebstore = require('dwebstore')
 
 const Peersockets = require('..')
 
@@ -269,7 +269,7 @@ async function create (opts = {}) {
       return bootstrap.once('listening', resolve)
     })
   }
-  const store =  new Corestore(ram)
+  const store =  new DWebstore(ram)
   await store.ready()
   const networker = new CorestoreNetworker(store,  { ...opts, bootstrap: `localhost:${BOOTSTRAP_PORT}` })
   return { store, networker }
